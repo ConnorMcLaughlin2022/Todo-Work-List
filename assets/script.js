@@ -1,3 +1,8 @@
+var date = $('#currentDay')
+function displayTime() {
+  var day = dayjs().format('dddd MMM D[,] YYYY')
+  date.text(day);
+}
 
 for (let index = 9; index < 18; index++) {
     var time = index
@@ -49,4 +54,5 @@ for (let index = 9; index < 18; index++) {
   }
   setInterval('window.location.reload()', 60000) ; 
   console.log("refresh")      
-  
+
+displayTime();
